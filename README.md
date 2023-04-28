@@ -1,1 +1,5 @@
-# clinical-concept-mapping
+The National Center for Biomedical Ontology (NCBO) BioPortal contains a comprehensive repository of biomedical ontologies. A HTTP GET request is sent to the NCBO BioPortal server for a set of terms and returns a set of resources (e.g., ontologies, classes) in JSON (JavaScript Object Notation) format. For example, the patient condition “Adenocarcinoma” from the source database was requested as http://data.bioontology.org/search?q=Adenocarcinoma&ontologies=SNOMEDCT. The python package rapidfuzz was used for string matching based on the Levenshtein Distance measurement to calculate the difference between the term and concept label to obtain the best match.
+
+Clinical terms without a corresponding medical vocabulary or concept are checked against the BioPortal to obtain a complete or partial match.
+
+The following code is a condensed and simpler version used in a project.
